@@ -1,0 +1,5 @@
+C:\Users\Fabian\OneDrive\School\Leerjaar 3\C#\SpotifyCasus\SpotifyCasus\SpotifyCasus\SpotifyCasus\obj\Debug\net6.0\SpotifyCasus.csproj.AssemblyReference.cache
+C:\Users\Fabian\OneDrive\School\Leerjaar 3\C#\SpotifyCasus\SpotifyCasus\SpotifyCasus\SpotifyCasus\obj\Debug\net6.0\SpotifyCasus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fabian\OneDrive\School\Leerjaar 3\C#\SpotifyCasus\SpotifyCasus\SpotifyCasus\SpotifyCasus\obj\Debug\net6.0\SpotifyCasus.AssemblyInfoInputs.cache
+C:\Users\Fabian\OneDrive\School\Leerjaar 3\C#\SpotifyCasus\SpotifyCasus\SpotifyCasus\SpotifyCasus\obj\Debug\net6.0\SpotifyCasus.AssemblyInfo.cs
+C:\Users\Fabian\OneDrive\School\Leerjaar 3\C#\SpotifyCasus\SpotifyCasus\SpotifyCasus\SpotifyCasus\obj\Debug\net6.0\SpotifyCasus.csproj.CoreCompileInputs.cache
