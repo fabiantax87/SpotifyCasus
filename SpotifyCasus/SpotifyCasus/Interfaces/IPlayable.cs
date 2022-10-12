@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SpotifyCasus.Interfaces
 {
-    internal interface IPlayable
+    internal interface iPlayable
     {
         void Play();
         void Pause();

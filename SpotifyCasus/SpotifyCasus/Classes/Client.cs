@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SpotifyCasus.Classes
 {
-    internal class Client : IPlayable
+    internal class Client
     {
         private string currentlyPlaying;
         private int currentTime;
@@ -22,6 +22,11 @@ namespace SpotifyCasus.Classes
         public bool Repeat { get { return repeat; } set { repeat = value; } }
 
         public Client(List<Person> personen, List<Album> albums, List<Song> songs)
+        {
+
+        }
+
+        public void CreatePlaylist(string title)
         {
 
         }
