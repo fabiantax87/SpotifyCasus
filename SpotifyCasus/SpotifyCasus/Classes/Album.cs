@@ -6,23 +6,7 @@ using System.Threading.Tasks;
 
 namespace SpotifyCasus.Classes
 {
-    internal class Album : SongCollection
+    internal class Album
     {
-        private List<Artist> artists;
-
-        public Album(List<Artist> artists, string title)
-        {
-            this.artists = artists;
-        }
-
-        public List<Artist> ShowArtists()
-        {
-            return artists;
-        }
-
-        public override string ToString()
-        {
-            return "";
-        }
     }
 }
