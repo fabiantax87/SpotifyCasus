@@ -16,6 +16,7 @@ namespace SpotifyCasus.Classes
         public bool repeat;
 
         private SuperUser activeUser;
+        private List<Person> allUsers;
 
         public SuperUser ActiveUser { get { return activeUser; } set { activeUser = value; } }
 
@@ -41,6 +42,11 @@ namespace SpotifyCasus.Classes
             {
                 Console.WriteLine(playlist.title);
             }
+        }
+
+        public void AddFriend(int index)
+        {
+            activeUser.Friends.Add(allUsers[index]);
         }
     }
 }

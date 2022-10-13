@@ -12,7 +12,8 @@ namespace SpotifyCasus.Classes
         private List<Person> friends;
         private List<Playlist> playlists;
 
-        public List<Playlist> Playlists { get => playlists; set => playlists = value; }
+        public List<Person> Friends { get { return friends; } set { friends = value; } }
+        public List<Playlist> Playlists { get { return playlists; } set { playlists = value; } }
 
         public Person(string name)
         {

@@ -23,5 +23,10 @@ namespace SpotifyCasus.Classes
         {
             Playlists.RemoveAt(index);
         }
+
+        public void AddFriend(Person person)
+        {
+            Friends.Add(person);
+        }
     }
 }
