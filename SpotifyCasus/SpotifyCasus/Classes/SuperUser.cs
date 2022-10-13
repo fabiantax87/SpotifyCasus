@@ -18,5 +18,10 @@ namespace SpotifyCasus.Classes
             Playlist playlist = new Playlist(this, title);
             Playlists.Add(playlist);
         }
+
+        public void RemovePlaylist(int index)
+        {
+            Playlists.RemoveAt(index);
+        }
     }
 }

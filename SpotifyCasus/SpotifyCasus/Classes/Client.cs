@@ -9,17 +9,16 @@ namespace SpotifyCasus.Classes
 {
     internal class Client
     {
-        private string currentlyPlaying;
-        private int currentTime;
-        private bool playing;
-        private bool shuffle;
-        private bool repeat;
+        public string currentlyPlaying;
+        public int currentTime;
+        public bool playing;
+        public bool shuffle;
+        public bool repeat;
 
-        public string CurrentlyPlaying { get { return currentlyPlaying; } set { currentlyPlaying = value; } }
-        public int CurrentTime { get { return currentTime; } set { currentTime = value; } }
-        public bool Playing { get { return playing; } set { playing = value; } }
-        public bool Shuffle { get { return shuffle; } set { shuffle = value; } }
-        public bool Repeat { get { return repeat; } set { repeat = value; } }
+        private SuperUser activeUser;
+
+        public SuperUser ActiveUser { get { return activeUser; } set { activeUser = value; } }
+
 
         public Client(List<Person> personen, List<Album> albums, List<Song> songs)
         {
@@ -28,7 +27,12 @@ namespace SpotifyCasus.Classes
 
         public void CreatePlaylist(string title)
         {
+            activeUser.CreatePlaylist(title);
+        }
 
+        public void RemovePlaylist(int index)
+        {
+            activeUser.RemovePlaylist(index);
         }
     }
 }
