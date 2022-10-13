@@ -33,5 +33,14 @@ namespace SpotifyCasus.Classes
         {
             activeUser.RemovePlaylist(index);
         }
+
+        public void ShowPlaylists()
+        {
+            List<Playlist> playlists = activeUser.ShowPlaylists();
+            foreach(Playlist playlist in playlists)
+            {
+                Console.WriteLine(playlist.title);
+            }
+        }
     }
 }

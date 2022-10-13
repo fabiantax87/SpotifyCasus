@@ -9,10 +9,8 @@ namespace SpotifyCasus.Classes
 {
     internal class SongCollection
     {
-        private string title;
+        public string title;
         private List<iPlayable> playables;
-
-        public string Title { get { return title; } set { title = value; } }
 
         public SongCollection(string title)
         {

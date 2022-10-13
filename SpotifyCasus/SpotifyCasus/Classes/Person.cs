@@ -19,5 +19,9 @@ namespace SpotifyCasus.Classes
             this.name = name;
         }
 
+        public List<Playlist> ShowPlaylists()
+        {
+            return playlists;
+        }
     }
 }
