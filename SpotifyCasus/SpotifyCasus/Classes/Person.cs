@@ -24,5 +24,10 @@ namespace SpotifyCasus.Classes
         {
             return playlists;
         }
+
+        public List<Person> ShowFriends()
+        {
+            return friends;
+        }
     }
 }

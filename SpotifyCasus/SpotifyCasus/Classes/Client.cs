@@ -48,5 +48,14 @@ namespace SpotifyCasus.Classes
         {
             activeUser.Friends.Add(allUsers[index]);
         }
+
+        public void ShowFriends()
+        {
+            List<Person> friends = activeUser.ShowFriends();
+            foreach (Person friend in friends)
+            {
+                Console.WriteLine(friend.name);
+            }
+        }
     }
 }
