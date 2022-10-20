@@ -17,6 +17,7 @@ namespace SpotifyCasus.Classes
 
         private SuperUser activeUser;
         private List<Person> allUsers;
+        private List<Song> allSongs;
 
         public SuperUser ActiveUser { get { return activeUser; } set { activeUser = value; } }
 
@@ -56,6 +57,11 @@ namespace SpotifyCasus.Classes
             {
                 Console.WriteLine(friend.name);
             }
+        }
+
+        public void AddToPlaylist(iPlayable playable, int index)
+        {
+            activeUser.AddToPlaylist(playable, index);
         }
     }
 }

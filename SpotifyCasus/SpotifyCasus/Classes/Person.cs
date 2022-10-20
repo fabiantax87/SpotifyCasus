@@ -29,5 +29,11 @@ namespace SpotifyCasus.Classes
         {
             return friends;
         }
+
+        public Playlist SelectPlaylist(int index)
+        {
+            Playlist selectedPlaylist = playlists[index];
+            return selectedPlaylist;
+        }
     }
 }

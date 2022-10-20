@@ -18,7 +18,7 @@ namespace SpotifyCasus.Classes
 
         public void Add(iPlayable playable)
         {
-
+            Playables.Add(playable);
         }
     }
 }

@@ -12,6 +12,8 @@ namespace SpotifyCasus.Classes
         public string title;
         private List<iPlayable> playables;
 
+        public List<iPlayable> Playables;
+
         public SongCollection(string title)
         {
             this.title = title;

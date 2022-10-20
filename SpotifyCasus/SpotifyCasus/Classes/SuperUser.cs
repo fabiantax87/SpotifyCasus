@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpotifyCasus.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,12 @@ namespace SpotifyCasus.Classes
         public void AddFriend(Person person)
         {
             Friends.Add(person);
+        }
+
+        public void AddToPlaylist(iPlayable playable, int index)
+        {
+            Playlist selectedPlaylist = SelectPlaylist(index);
+            selectedPlaylist.Add(playable);
         }
     }
 }
