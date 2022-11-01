@@ -23,7 +23,15 @@ namespace SpotifyCasus.Classes
 
         public Client(List<Person> personen, List<Album> albums, List<Song> songs)
         {
+            this.allUsers = personen;
+        }
 
+        public void ShowAllUsers()
+        {
+            foreach (Person user in allUsers)
+            {
+                Console.WriteLine(user.name);
+            }
         }
 
         public void CreatePlaylist(string title)
