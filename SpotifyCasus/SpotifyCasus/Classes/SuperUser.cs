@@ -35,5 +35,11 @@ namespace SpotifyCasus.Classes
             Playlist selectedPlaylist = SelectPlaylist(index);
             selectedPlaylist.Add(playable);
         }
+
+        public void RemoveFromPlaylist(iPlayable playable, int index)
+        {
+            Playlist selectedPlaylist = SelectPlaylist(index);
+            selectedPlaylist.Remove(playable);
+        }
     }
 }
