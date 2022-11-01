@@ -32,7 +32,7 @@ namespace SpotifyCasus.Classes
             {
                 Console.WriteLine(user.name);
             }
-        }
+        } 
 
         public void CreatePlaylist(string title)
         {
@@ -53,19 +53,6 @@ namespace SpotifyCasus.Classes
             }
         }
 
-        public void AddFriend(int index)
-        {
-            activeUser.Friends.Add(allUsers[index]);
-        }
-
-        public void ShowFriends()
-        {
-            List<Person> friends = activeUser.ShowFriends();
-            foreach (Person friend in friends)
-            {
-                Console.WriteLine(friend.name);
-            }
-        }
 
         public void AddToPlaylist(iPlayable playable, int index)
         {
@@ -75,6 +62,24 @@ namespace SpotifyCasus.Classes
         public void RemoveFromPlaylist(iPlayable playable, int index)
         {
             activeUser.RemoveFromPlaylist(playable, index);
+        }
+        public void ShowFriends()
+        {
+            List<Person> friends = activeUser.ShowFriends();
+            foreach (Person friend in friends)
+            {
+                Console.WriteLine(friend.name);
+            }
+        }
+
+        public void AddFriend(int index)
+        {
+            activeUser.Friends.Add(allUsers[index]);
+        }
+
+        public void RemoveFriend(int index)
+        {
+            activeUser.Friends.Remove(allUsers[index]);
         }
     }
 }

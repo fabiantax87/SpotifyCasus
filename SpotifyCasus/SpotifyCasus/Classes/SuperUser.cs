@@ -30,6 +30,11 @@ namespace SpotifyCasus.Classes
             Friends.Add(person);
         }
 
+        public void RemoveFriend(Person person)
+        {
+            Friends.Remove(person);
+        }
+
         public void AddToPlaylist(iPlayable playable, int index)
         {
             Playlist selectedPlaylist = SelectPlaylist(index);
