@@ -45,7 +45,7 @@ namespace SpotifyCasus.Classes
 
         public void Stop()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Song has stopped playing");
         }
 
         public void Next()

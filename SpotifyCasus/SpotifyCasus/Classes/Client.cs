@@ -9,7 +9,7 @@ namespace SpotifyCasus.Classes
 {
     internal class Client
     {
-        public string currentlyPlaying;
+        public iPlayable currentlyPlaying;
         public int currentTime;
         public bool playing;
         public bool shuffle;
@@ -45,6 +45,16 @@ namespace SpotifyCasus.Classes
         public void SelectUserPlaylist(Person user, int index)
         {
             user.SelectPlaylist(index);
+        }
+
+        public void Play()
+        {
+            currentlyPlaying.Play();
+        }
+
+        public void Stop()
+        {
+            currentlyPlaying.Stop();
         }
 
         public void CreatePlaylist(string title)
