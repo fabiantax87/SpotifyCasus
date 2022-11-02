@@ -35,7 +35,7 @@ namespace SpotifyCasus.Classes
 
         public void Play()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Currently playing: " + title);
         }
 
         public void Pause()
