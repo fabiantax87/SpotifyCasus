@@ -14,6 +14,16 @@ namespace SpotifyCasus.Classes
 
         }
 
+        public void AddFriend(Person person)
+        {
+            Friends.Add(person);
+        }
+
+        public void RemoveFriend(Person person)
+        {
+            Friends.Remove(person);
+        }
+
         public void CreatePlaylist(string title)
         {
             Playlist playlist = new Playlist(this, title);
@@ -23,16 +33,6 @@ namespace SpotifyCasus.Classes
         public void RemovePlaylist(int index)
         {
             Playlists.RemoveAt(index);
-        }
-
-        public void AddFriend(Person person)
-        {
-            Friends.Add(person);
-        }
-
-        public void RemoveFriend(Person person)
-        {
-            Friends.Remove(person);
         }
 
         public void AddToPlaylist(iPlayable playable, int index)

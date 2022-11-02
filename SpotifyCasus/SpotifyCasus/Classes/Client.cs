@@ -61,9 +61,14 @@ namespace SpotifyCasus.Classes
             }
         }
 
+        public void SelectUser(int index)
+        {
+            Console.WriteLine(allUsers[index].ToString());
+        }
+
         public void ShowUserPlaylists(Person user)
         {
-            foreach (Playlist playlist in user.Playlists)
+            foreach (Playlist playlist in user.ShowPlaylists())
             {
                 Console.WriteLine(playlist);
             }
@@ -109,11 +114,6 @@ namespace SpotifyCasus.Classes
             activeUser.CreatePlaylist(title);
         }
 
-        public void RemovePlaylist(int index)
-        {
-            activeUser.RemovePlaylist(index);
-        }
-
         public void ShowPlaylists()
         {
             List<Playlist> playlists = activeUser.ShowPlaylists();
@@ -123,16 +123,31 @@ namespace SpotifyCasus.Classes
             }
         }
 
+        public void SelectPlaylist(int index)
+        {
+            activeUser.SelectPlaylist(index);
+        }
+
+        public void RemovePlaylist(int index)
+        {
+            activeUser.RemovePlaylist(index);
+        }
 
         public void AddToPlaylist(iPlayable playable, int index)
         {
             activeUser.AddToPlaylist(playable, index);
         }
 
+        public void ShowSongsInPlaylist(Playlist playlist)
+        {
+            playlist.ShowPlayables();
+        }
+
         public void RemoveFromPlaylist(iPlayable playable, int index)
         {
             activeUser.RemoveFromPlaylist(playable, index);
         }
+
         public void ShowFriends()
         {
             List<Person> friends = activeUser.ShowFriends();
@@ -140,6 +155,11 @@ namespace SpotifyCasus.Classes
             {
                 Console.WriteLine(friend.name);
             }
+        }
+
+        public void SelectFriend(int index)
+        {
+            Console.WriteLine(activeUser.Friends[index].ToString());
         }
 
         public void AddFriend(int index)

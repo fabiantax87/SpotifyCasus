@@ -15,14 +15,24 @@ namespace SpotifyCasus.Classes
             this.artists = artists;
         }
 
-        public List<Artist> ShowArtists()
+        public void ShowArtists()
         {
-            return artists;
+            foreach (Artist artist in artists)
+            {
+                Console.WriteLine(artist.ToString());
+            }
         }
 
         public override string ToString()
         {
-            return "";
+            string artistsString = "";
+
+            foreach (Artist artist in artists)
+            {
+                artistsString += artist.Name + ", ";
+            }
+
+            return title + " | " + artistsString;
         }
     }
 }

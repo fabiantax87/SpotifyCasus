@@ -20,20 +20,37 @@ namespace SpotifyCasus.Classes
             this.name = name;
         }
 
-        public List<Playlist> ShowPlaylists()
-        {
-            return playlists;
-        }
-
         public List<Person> ShowFriends()
         {
             return friends;
         }
 
+        public List<Playlist> ShowPlaylists()
+        {
+            return playlists;
+        }
+
         public Playlist SelectPlaylist(int index)
         {
-            Playlist selectedPlaylist = playlists[index];
-            return selectedPlaylist;
+            return playlists[index];
+        }
+
+        public override string ToString()
+        {
+            string friendsString = "";
+            string playlistsString = "";
+
+            foreach (Person person in friends)
+            {
+                friendsString += person.name + ", ";
+            }
+
+            foreach (Playlist playlist in playlists)
+            {
+                playlistsString += playlist.title + ", ";
+            }
+
+            return name + " | " + friendsString + " | " + playlistsString;
         }
     }
 }

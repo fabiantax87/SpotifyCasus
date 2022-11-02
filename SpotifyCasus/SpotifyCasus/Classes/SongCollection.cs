@@ -47,5 +47,18 @@ namespace SpotifyCasus.Classes
         {
             throw new NotImplementedException();
         }
+
+        public override string ToString()
+        {
+            return title;
+        }
+
+        public void ShowPlayables()
+        {
+            foreach (iPlayable playable in playables)
+            {
+                Console.WriteLine(playable.ToString());
+            }
+        }
     }
 }
