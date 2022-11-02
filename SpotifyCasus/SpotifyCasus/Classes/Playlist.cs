@@ -25,5 +25,10 @@ namespace SpotifyCasus.Classes
         {
             Playables.Remove(playable);
         }
+
+        public override string ToString()
+        {
+            return "Title: " + title + " | Owner: " + owner;
+        }
     }
 }

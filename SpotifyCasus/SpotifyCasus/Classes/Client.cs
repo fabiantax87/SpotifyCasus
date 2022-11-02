@@ -32,7 +32,20 @@ namespace SpotifyCasus.Classes
             {
                 Console.WriteLine(user.name);
             }
-        } 
+        }
+
+        public void ShowUserPlaylists(Person user)
+        {
+            foreach (Playlist playlist in user.Playlists)
+            {
+                Console.WriteLine(playlist);
+            }
+        }
+
+        public void SelectUserPlaylist(Person user, int index)
+        {
+            user.SelectPlaylist(index);
+        }
 
         public void CreatePlaylist(string title)
         {
