@@ -57,6 +57,11 @@ namespace SpotifyCasus.Classes
             currentlyPlaying.Stop();
         }
 
+        public void NextSong()
+        {
+            currentlyPlaying.Next();
+        }
+
         public void CreatePlaylist(string title)
         {
             activeUser.CreatePlaylist(title);

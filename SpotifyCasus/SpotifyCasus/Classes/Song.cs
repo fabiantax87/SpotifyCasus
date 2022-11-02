@@ -50,7 +50,7 @@ namespace SpotifyCasus.Classes
 
         public void Next()
         {
-            throw new NotImplementedException();
+            Play();
         }
 
         public int Length()
