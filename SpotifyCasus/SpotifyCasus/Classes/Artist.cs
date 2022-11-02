@@ -31,7 +31,7 @@ namespace SpotifyCasus.Classes
 
         public override string ToString()
         {
-            return "";
+            return "Name: " + name;
         }
     }
 }

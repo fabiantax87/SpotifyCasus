@@ -16,14 +16,28 @@ namespace SpotifyCasus.Classes
         public bool repeat;
 
         private SuperUser activeUser;
-        private List<Person> allUsers;
+        private List<Album> allAlbums;
         private List<Song> allSongs;
+        private List<Person> allUsers;
 
         public SuperUser ActiveUser { get { return activeUser; } set { activeUser = value; } }
 
         public Client(List<Person> personen, List<Album> albums, List<Song> songs)
         {
             this.allUsers = personen;
+        }
+
+        public void ShowAllAlbums()
+        {
+            foreach (Album album in allAlbums)
+            {
+                Console.WriteLine(album.title);
+            }
+        }
+
+        public void SelectAlbum(int index)
+        {
+            Console.WriteLine(allAlbums[index].title);
         }
 
         public void ShowAllUsers()
