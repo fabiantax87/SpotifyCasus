@@ -40,6 +40,19 @@ namespace SpotifyCasus.Classes
             Console.WriteLine(allAlbums[index].title);
         }
 
+        public void ShowAllSongs()
+        {
+            foreach (Song song in allSongs)
+            {
+                Console.WriteLine(song);
+            }
+        }
+
+        public void SelectSong(int index)
+        {
+            Console.WriteLine(allSongs[index].ToString());
+        }
+
         public void ShowAllUsers()
         {
             foreach (Person user in allUsers)
