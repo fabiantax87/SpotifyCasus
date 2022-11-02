@@ -52,6 +52,11 @@ namespace SpotifyCasus.Classes
             currentlyPlaying.Play();
         }
 
+        public void Pause()
+        {
+            currentlyPlaying.Pause();
+        }
+
         public void Stop()
         {
             currentlyPlaying.Stop();

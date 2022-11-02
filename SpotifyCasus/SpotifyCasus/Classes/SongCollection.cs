@@ -30,17 +30,17 @@ namespace SpotifyCasus.Classes
 
         public void Pause()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Paused: " + title);
         }
 
         public void Stop()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Stopped: " + title);
         }
 
         public void Next()
         {
-            throw new NotImplementedException();
+            Play();
         }
 
         public int Length()

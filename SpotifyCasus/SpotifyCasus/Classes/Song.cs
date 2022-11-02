@@ -40,12 +40,12 @@ namespace SpotifyCasus.Classes
 
         public void Pause()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Paused: " + title);
         }
 
         public void Stop()
         {
-            Console.WriteLine("Song has stopped playing");
+            Console.WriteLine("Stopped: " + title);
         }
 
         public void Next()
