@@ -10,6 +10,7 @@ namespace SpotifyCasus.Classes
     {
         private string name;
         private List<Song> songs;
+        private List<Album> albums;
 
         public string Name { get { return name; } set { name = value; } }
 
@@ -25,7 +26,7 @@ namespace SpotifyCasus.Classes
 
         public void AddAlbum(Album album)
         {
-
+            albums.Add(album);
         }
 
         public override string ToString()
