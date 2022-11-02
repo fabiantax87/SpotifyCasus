@@ -67,6 +67,11 @@ namespace SpotifyCasus.Classes
             currentlyPlaying.Next();
         }
 
+        public void SetShuffle(bool value)
+        {
+            shuffle = value;
+        }
+
         public void CreatePlaylist(string title)
         {
             activeUser.CreatePlaylist(title);
