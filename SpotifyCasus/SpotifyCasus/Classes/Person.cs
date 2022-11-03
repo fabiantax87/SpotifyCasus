@@ -9,7 +9,7 @@ namespace SpotifyCasus.Classes
     internal class Person
     {
         public string name;
-        private List<Person> friends;
+        internal List<Person> friends;
         private List<Playlist> playlists;
 
         public List<Person> Friends { get { return friends; } set { friends = value; } }
@@ -20,14 +20,20 @@ namespace SpotifyCasus.Classes
             this.name = name;
         }
 
-        public List<Person> ShowFriends()
+        public void ShowFriends()
         {
-            return friends;
+            foreach (Person friend in friends)
+            {
+                Console.WriteLine(friend.name);
+            }
         }
 
-        public List<Playlist> ShowPlaylists()
+        public void ShowPlaylists()
         {
-            return playlists;
+            foreach (Playlist playlist in playlists)
+            {
+                Console.WriteLine(playlist.title);
+            }
         }
 
         public Playlist SelectPlaylist(int index)

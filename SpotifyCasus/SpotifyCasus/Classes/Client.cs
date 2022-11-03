@@ -25,6 +25,8 @@ namespace SpotifyCasus.Classes
         public Client(List<Person> personen, List<Album> albums, List<Song> songs)
         {
             this.allUsers = personen;
+            this.allAlbums = albums;
+            this.allSongs = songs;
         }
 
         public void ShowAllAlbums()
@@ -116,11 +118,7 @@ namespace SpotifyCasus.Classes
 
         public void ShowPlaylists()
         {
-            List<Playlist> playlists = activeUser.ShowPlaylists();
-            foreach(Playlist playlist in playlists)
-            {
-                Console.WriteLine(playlist.title);
-            }
+            activeUser.ShowPlaylists();
         }
 
         public void SelectPlaylist(int index)
@@ -150,11 +148,7 @@ namespace SpotifyCasus.Classes
 
         public void ShowFriends()
         {
-            List<Person> friends = activeUser.ShowFriends();
-            foreach (Person friend in friends)
-            {
-                Console.WriteLine(friend.name);
-            }
+            activeUser.ShowFriends();
         }
 
         public void SelectFriend(int index)
@@ -164,12 +158,12 @@ namespace SpotifyCasus.Classes
 
         public void AddFriend(int index)
         {
-            activeUser.Friends.Add(allUsers[index]);
+            activeUser.AddFriend(allUsers[index]);
         }
 
         public void RemoveFriend(int index)
         {
-            activeUser.Friends.Remove(allUsers[index]);
+            activeUser.RemoveFriend(allUsers[index]);
         }
     }
 }

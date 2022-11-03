@@ -22,10 +22,7 @@ namespace SpotifyCasus.Classes
 
         public void Play()
         {
-            int itemCount = playables.Count;
-            Random rnd = new Random();
-            int randomNum = rnd.Next(itemCount);
-            playables[randomNum].Play();
+            playables[0].Play();
         }
 
         public void Pause()

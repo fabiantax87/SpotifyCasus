@@ -16,12 +16,12 @@ namespace SpotifyCasus.Classes
 
         public void AddFriend(Person person)
         {
-            Friends.Add(person);
+            friends.Add(person);
         }
 
         public void RemoveFriend(Person person)
         {
-            Friends.Remove(person);
+            friends.Remove(person);
         }
 
         public void CreatePlaylist(string title)
