@@ -18,6 +18,8 @@ namespace SpotifyCasus.Classes
         public Person(string name)
         {
             this.name = name;
+            this.playlists = new List<Playlist>();
+            this.friends = new List<Person>();
         }
 
         public void ShowFriends()

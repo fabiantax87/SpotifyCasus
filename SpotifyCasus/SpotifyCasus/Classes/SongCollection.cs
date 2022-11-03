@@ -11,6 +11,7 @@ namespace SpotifyCasus.Classes
     {
         public string title;
         private List<iPlayable> playables;
+        private int length;
 
         public List<iPlayable> Playables { get { return playables; } set { playables = value; } }
 
@@ -22,7 +23,10 @@ namespace SpotifyCasus.Classes
 
         public void Play()
         {
-            playables[0].Play();
+            foreach (iPlayable playable in playables)
+            {
+                playable.Play();
+            }
         }
 
         public void Pause()
@@ -40,9 +44,9 @@ namespace SpotifyCasus.Classes
             Play();
         }
 
-        public int Length()
+        public void Length()
         {
-            throw new NotImplementedException();
+            Console.Write(length);
         }
 
         public override string ToString()

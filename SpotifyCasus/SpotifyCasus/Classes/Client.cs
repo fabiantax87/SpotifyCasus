@@ -1,4 +1,5 @@
-﻿using SpotifyCasus.Interfaces;
+﻿using Newtonsoft.Json;
+using SpotifyCasus.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,11 +23,17 @@ namespace SpotifyCasus.Classes
 
         public SuperUser ActiveUser { get { return activeUser; } set { activeUser = value; } }
 
-        public Client(List<Person> personen, List<Album> albums, List<Song> songs)
+        public Client(List<Person> users, List<Album> albums, List<Song> songs)
         {
-            this.allUsers = personen;
+            this.allUsers = users;
             this.allAlbums = albums;
             this.allSongs = songs;
+        }
+
+        public void SetActiveUser(Person user)
+        {
+            var serializedParent = JsonConvert.SerializeObject(user);
+            activeUser = JsonConvert.DeserializeObject<SuperUser>(serializedParent);
         }
 
         public void ShowAllAlbums()
@@ -68,12 +75,9 @@ namespace SpotifyCasus.Classes
             Console.WriteLine(allUsers[index].ToString());
         }
 
-        public void ShowUserPlaylists(Person user)
+        public void ShowUserPlaylists()
         {
-            foreach (Playlist playlist in user.ShowPlaylists())
-            {
-                Console.WriteLine(playlist);
-            }
+            activeUser.ShowPlaylists();
         }
 
         public void SelectUserPlaylist(Person user, int index)

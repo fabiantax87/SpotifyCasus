@@ -12,6 +12,6 @@ namespace SpotifyCasus.Interfaces
         void Pause();
         void Stop();
         void Next();
-        int Length();
+        void Length();
     }
 }

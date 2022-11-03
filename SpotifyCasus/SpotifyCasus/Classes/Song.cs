@@ -13,12 +13,11 @@ namespace SpotifyCasus.Classes
         private string title;
         private List<Artist> artists;
         private Genre songGenre;
+        private int length;
 
         public string Title { get { return title; } set { title = value; } }
         public List<Artist> Artists { get { return artists; } set { artists = value; } }
         public Genre SongGenre { get { return songGenre; } set { songGenre = value; } }
-
-        private int length;
 
         public Song(string title, List<Artist> artists, int length, Genre songGenre)
         {
@@ -53,9 +52,9 @@ namespace SpotifyCasus.Classes
             Play();
         }
 
-        public int Length()
+        public void Length()
         {
-            throw new NotImplementedException();
+            Console.Write(length);
         }
     }
 }

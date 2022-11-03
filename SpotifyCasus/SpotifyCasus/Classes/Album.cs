@@ -8,11 +8,15 @@ namespace SpotifyCasus.Classes
 {
     internal class Album : SongCollection
     {
+        public string title;
         private List<Artist> artists;
+        private List<Song> songs;
 
-        public Album(List<Artist> artists, string title) : base(title)
+        public Album(List<Artist> artists, string title, List<Song> songs) : base(title)
         {
+            this.title = title;
             this.artists = artists;
+            this.songs = songs;
         }
 
         public void ShowArtists()

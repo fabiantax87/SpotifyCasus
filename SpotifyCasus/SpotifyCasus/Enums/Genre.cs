@@ -42,5 +42,6 @@ namespace SpotifyCasus.Enums
         Dance,
         DnB,
         Other,
+        Techno,
     }
 }
